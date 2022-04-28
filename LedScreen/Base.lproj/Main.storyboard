@@ -1,24 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ySv-p5-3eA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LedScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3o-wG-EyJ">
+                                <rect key="frame" x="20" y="248" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Segue - Push"/>
+                                <connections>
+                                    <segue destination="rBY-d6-18D" kind="show" id="ldW-VN-1Fm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFT-nC-BsN">
+                                <rect key="frame" x="20" y="359" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Segue - Present"/>
+                                <connections>
+                                    <segue destination="M1w-1Q-eFB" kind="presentation" modalPresentationStyle="fullScreen" id="aRS-D9-GX0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1W-xh-jVa">
+                                <rect key="frame" x="20" y="470" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Code - Push"/>
+                                <connections>
+                                    <action selector="tabCodePushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdG-69-VZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgH-vE-bQv">
+                                <rect key="frame" x="20" y="581" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Code - Present"/>
+                                <connections>
+                                    <action selector="tabCodePresentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKT-HP-X41"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1W-xh-jVa" firstAttribute="top" secondItem="fFT-nC-BsN" secondAttribute="bottom" constant="80" id="037-S3-n3Z"/>
+                            <constraint firstItem="w3o-wG-EyJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="32g-HN-9TY"/>
+                            <constraint firstItem="fFT-nC-BsN" firstAttribute="top" secondItem="w3o-wG-EyJ" secondAttribute="bottom" constant="80" id="E85-Mc-ymd"/>
+                            <constraint firstItem="o1W-xh-jVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kv1-fD-QEX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o1W-xh-jVa" secondAttribute="trailing" constant="20" id="SV8-y2-20x"/>
+                            <constraint firstItem="fFT-nC-BsN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eYO-Ju-aXU"/>
+                            <constraint firstItem="NgH-vE-bQv" firstAttribute="top" secondItem="o1W-xh-jVa" secondAttribute="bottom" constant="80" id="hbM-Xe-ItP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFT-nC-BsN" secondAttribute="trailing" constant="20" id="pGy-vJ-L08"/>
+                            <constraint firstItem="NgH-vE-bQv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pxw-ms-sjZ"/>
+                            <constraint firstItem="w3o-wG-EyJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="tXE-py-B1C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NgH-vE-bQv" secondAttribute="trailing" constant="20" id="yMl-6i-KtM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w3o-wG-EyJ" secondAttribute="trailing" constant="20" id="zqR-3o-6cP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LFB-ST-sjb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="71"/>
+        </scene>
+        <!--Segue Push View Controller-->
+        <scene sceneID="HPd-eu-zOk">
+            <objects>
+                <viewController id="rBY-d6-18D" customClass="SeguePushViewController" customModule="LedScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqP-DN-0y2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segue - Push" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xK-wk-4Ie">
+                                <rect key="frame" x="20" y="370" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-8t-KHe">
+                                <rect key="frame" x="20" y="421" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back Button"/>
+                                <connections>
+                                    <action selector="tabBackButton:" destination="rBY-d6-18D" eventType="touchUpInside" id="eas-lb-HeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ehj-Yc-vdf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oiO-8t-KHe" firstAttribute="leading" secondItem="Ehj-Yc-vdf" secondAttribute="leading" constant="20" id="MBp-DQ-boi"/>
+                            <constraint firstItem="Ehj-Yc-vdf" firstAttribute="trailing" secondItem="3xK-wk-4Ie" secondAttribute="trailing" constant="20" id="QLe-eK-53c"/>
+                            <constraint firstItem="3xK-wk-4Ie" firstAttribute="leading" secondItem="Ehj-Yc-vdf" secondAttribute="leading" constant="20" id="eSd-Ke-nXX"/>
+                            <constraint firstItem="3xK-wk-4Ie" firstAttribute="top" secondItem="Ehj-Yc-vdf" secondAttribute="top" constant="282" id="miO-2u-h3a"/>
+                            <constraint firstItem="oiO-8t-KHe" firstAttribute="top" secondItem="3xK-wk-4Ie" secondAttribute="bottom" constant="30" id="qfJ-i0-pnf"/>
+                            <constraint firstItem="Ehj-Yc-vdf" firstAttribute="trailing" secondItem="oiO-8t-KHe" secondAttribute="trailing" constant="20" id="tWf-b8-Gge"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pIx-8f-dgE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAR-Pu-15a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="71"/>
+        </scene>
+        <!--Code Present View Controller-->
+        <scene sceneID="NNp-Cf-Da8">
+            <objects>
+                <viewController storyboardIdentifier="CodePresentViewController" id="eg2-xT-5l7" customClass="CodePresentViewController" customModule="LedScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YG8-XS-Xey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBJ-Qx-XpQ">
+                                <rect key="frame" x="20" y="377" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back Button"/>
+                                <connections>
+                                    <action selector="tabBackButton:" destination="eg2-xT-5l7" eventType="touchUpInside" id="j7y-OW-q2Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-Rv-P1a">
+                                <rect key="frame" x="20" y="326" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nkx-Gq-nZS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nkx-Gq-nZS" firstAttribute="trailing" secondItem="DAI-Rv-P1a" secondAttribute="trailing" constant="20" id="9yT-TD-tUd"/>
+                            <constraint firstItem="mBJ-Qx-XpQ" firstAttribute="top" secondItem="DAI-Rv-P1a" secondAttribute="bottom" constant="30" id="YED-Wj-zJg"/>
+                            <constraint firstItem="DAI-Rv-P1a" firstAttribute="top" secondItem="nkx-Gq-nZS" secondAttribute="top" constant="282" id="bHn-mY-36e"/>
+                            <constraint firstItem="nkx-Gq-nZS" firstAttribute="trailing" secondItem="mBJ-Qx-XpQ" secondAttribute="trailing" constant="20" id="c8o-Xb-x6b"/>
+                            <constraint firstItem="DAI-Rv-P1a" firstAttribute="leading" secondItem="nkx-Gq-nZS" secondAttribute="leading" constant="20" id="dmI-jd-dZT"/>
+                            <constraint firstItem="mBJ-Qx-XpQ" firstAttribute="leading" secondItem="nkx-Gq-nZS" secondAttribute="leading" constant="20" id="wWE-JX-WTN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJo-Nb-SSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="842"/>
+        </scene>
+        <!--Code Push View Controller-->
+        <scene sceneID="gpb-ka-g5a">
+            <objects>
+                <viewController storyboardIdentifier="CodePushViewController" id="6UR-eK-e6W" customClass="CodePushViewController" customModule="LedScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSJ-sN-e9e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code - Push" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-xL-iYa">
+                                <rect key="frame" x="20" y="326" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIe-bk-b5r">
+                                <rect key="frame" x="20" y="377" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back Button"/>
+                                <connections>
+                                    <action selector="tabBackButton:" destination="6UR-eK-e6W" eventType="touchUpInside" id="yTv-dr-gi4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eoy-QQ-Qmu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6SN-xL-iYa" firstAttribute="top" secondItem="Eoy-QQ-Qmu" secondAttribute="top" constant="282" id="ABx-Ef-Lyv"/>
+                            <constraint firstItem="6SN-xL-iYa" firstAttribute="leading" secondItem="Eoy-QQ-Qmu" secondAttribute="leading" constant="20" id="HcR-wl-AY7"/>
+                            <constraint firstItem="MIe-bk-b5r" firstAttribute="top" secondItem="6SN-xL-iYa" secondAttribute="bottom" constant="30" id="MKD-RP-1cx"/>
+                            <constraint firstItem="Eoy-QQ-Qmu" firstAttribute="trailing" secondItem="MIe-bk-b5r" secondAttribute="trailing" constant="20" id="N5f-Zv-wDh"/>
+                            <constraint firstItem="MIe-bk-b5r" firstAttribute="leading" secondItem="Eoy-QQ-Qmu" secondAttribute="leading" constant="20" id="YLT-c8-7qW"/>
+                            <constraint firstItem="Eoy-QQ-Qmu" firstAttribute="trailing" secondItem="6SN-xL-iYa" secondAttribute="trailing" constant="20" id="erh-g1-Nzc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iZ-VL-XI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="841"/>
+        </scene>
+        <!--Segue Present View Controller-->
+        <scene sceneID="bu1-g7-S1p">
+            <objects>
+                <viewController id="M1w-1Q-eFB" customClass="SeguePresentViewController" customModule="LedScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H8L-yH-iSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segue - Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWk-b8-HDf">
+                                <rect key="frame" x="20" y="326" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sr-Kc-I7P">
+                                <rect key="frame" x="20" y="377" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back Button"/>
+                                <connections>
+                                    <action selector="tabBackButton:" destination="M1w-1Q-eFB" eventType="touchUpInside" id="VKT-5X-H4J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nuy-4o-FOG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Sr-Kc-I7P" firstAttribute="leading" secondItem="Nuy-4o-FOG" secondAttribute="leading" constant="20" id="Kll-Gb-dbC"/>
+                            <constraint firstItem="dWk-b8-HDf" firstAttribute="top" secondItem="Nuy-4o-FOG" secondAttribute="top" constant="282" id="U6M-rR-DRI"/>
+                            <constraint firstItem="Nuy-4o-FOG" firstAttribute="trailing" secondItem="dWk-b8-HDf" secondAttribute="trailing" constant="20" id="dqR-2M-v6e"/>
+                            <constraint firstItem="1Sr-Kc-I7P" firstAttribute="top" secondItem="dWk-b8-HDf" secondAttribute="bottom" constant="30" id="eLx-kJ-hZA"/>
+                            <constraint firstItem="dWk-b8-HDf" firstAttribute="leading" secondItem="Nuy-4o-FOG" secondAttribute="leading" constant="20" id="pyt-8U-r1G"/>
+                            <constraint firstItem="Nuy-4o-FOG" firstAttribute="trailing" secondItem="1Sr-Kc-I7P" secondAttribute="trailing" constant="20" id="tTC-tW-cBK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sId-JA-edl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="841"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fQn-Fp-ORx">
+            <objects>
+                <navigationController id="ySv-p5-3eA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GcE-2T-Cxh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zfd-WS-eBu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mno-vF-N4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="71"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

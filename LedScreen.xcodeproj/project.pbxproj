@@ -13,6 +13,10 @@
 		A5438B942819285E001AEFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5438B922819285E001AEFBD /* Main.storyboard */; };
 		A5438B9628192864001AEFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5438B9528192864001AEFBD /* Assets.xcassets */; };
 		A5438B9928192864001AEFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5438B9728192864001AEFBD /* LaunchScreen.storyboard */; };
+		A5438BA1281930BB001AEFBD /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438BA0281930BB001AEFBD /* SeguePushViewController.swift */; };
+		A5438BA328193574001AEFBD /* SeguePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438BA228193574001AEFBD /* SeguePresentViewController.swift */; };
+		A5438BA528193B93001AEFBD /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438BA428193B93001AEFBD /* CodePushViewController.swift */; };
+		A5438BA728194021001AEFBD /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438BA628194021001AEFBD /* CodePresentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A5438B9528192864001AEFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5438B9828192864001AEFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5438B9A28192864001AEFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5438BA0281930BB001AEFBD /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
+		A5438BA228193574001AEFBD /* SeguePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePresentViewController.swift; sourceTree = "<group>"; };
+		A5438BA428193B93001AEFBD /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
+		A5438BA628194021001AEFBD /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				A5438B9528192864001AEFBD /* Assets.xcassets */,
 				A5438B9728192864001AEFBD /* LaunchScreen.storyboard */,
 				A5438B9A28192864001AEFBD /* Info.plist */,
+				A5438BA0281930BB001AEFBD /* SeguePushViewController.swift */,
+				A5438BA228193574001AEFBD /* SeguePresentViewController.swift */,
+				A5438BA428193B93001AEFBD /* CodePushViewController.swift */,
+				A5438BA628194021001AEFBD /* CodePresentViewController.swift */,
 			);
 			path = LedScreen;
 			sourceTree = "<group>";
@@ -138,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5438BA1281930BB001AEFBD /* SeguePushViewController.swift in Sources */,
+				A5438BA528193B93001AEFBD /* CodePushViewController.swift in Sources */,
 				A5438B912819285E001AEFBD /* ViewController.swift in Sources */,
 				A5438B8D2819285E001AEFBD /* AppDelegate.swift in Sources */,
+				A5438BA728194021001AEFBD /* CodePresentViewController.swift in Sources */,
+				A5438BA328193574001AEFBD /* SeguePresentViewController.swift in Sources */,
 				A5438B8F2819285E001AEFBD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
